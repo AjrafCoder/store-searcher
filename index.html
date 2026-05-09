@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UK Game Arbitrage</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  body { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  th[data-sort] { cursor: pointer; user-select: none; }
+  th[data-sort]:hover { text-decoration: underline; }
+  .pill { display: inline-block; padding: 0 .5rem; border-radius: 9999px; font-size: .7rem; font-weight: 600; }
+  .pill-low    { background:#dcfce7; color:#14532d; }
+  .pill-medium { background:#fef9c3; color:#713f12; }
+  .pill-high   { background:#fee2e2; color:#7f1d1d; }
+</style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+<header class="border-b bg-white">
+  <div class="max-w-7xl mx-auto px-4 py-5 flex flex-wrap items-baseline gap-4">
+    <h1 class="text-2xl font-bold">UK Game Arbitrage</h1>
+    <span id="meta" class="text-sm text-slate-500"></span>
+    <a href="https://github.com" id="repoLink" class="ml-auto text-sm text-blue-600 hover:underline">source</a>
+  </div>
+</header>
+
+<main class="max-w-7xl mx-auto px-4 py-6">
+
+  <section id="summary" class="mb-4 grid grid-cols-2 md:grid-cols-4 gap-3">
+    <div class="bg-white rounded-lg p-3 shadow-sm"><div class="text-xs text-slate-500">Deals</div><div id="stat-count" class="text-xl font-semibold">—</div></div>
+    <div class="bg-white rounded-lg p-3 shadow-sm"><div class="text-xs text-slate-500">Total profit (voucher)</div><div id="stat-profit" class="text-xl font-semibold">—</div></div>
+    <div class="bg-white rounded-lg p-3 shadow-sm"><div class="text-xs text-slate-500">Min profit threshold</div><div id="stat-min" class="text-xl font-semibold">£1.00</div></div>
+    <div class="bg-white rounded-lg p-3 shadow-sm"><div class="text-xs text-slate-500">Updated</div><div id="stat-updated" class="text-xl font-semibold">—</div></div>
+  </section>
+
+  <section class="mb-4 bg-white rounded-lg p-4 shadow-sm grid gap-3 md:grid-cols-4">
+    <label class="text-sm">
+      <span class="block text-slate-500 mb-1">Platforms</span>
+      <select id="f-platforms" multiple size="4" class="w-full border rounded p-1"></select>
+    </label>
+    <label class="text-sm">
+      <span class="block text-slate-500 mb-1">Retailers</span>
+      <select id="f-retailers" multiple size="4" class="w-full border rounded p-1"></select>
+    </label>
+    <label class="text-sm">
+      <span class="block text-slate-500 mb-1">Min profit (voucher): £<span id="f-min-label">1</span></span>
+      <input id="f-min" type="range" min="1" max="50" step="1" value="1" class="w-full">
+    </label>
+    <label class="text-sm flex items-center gap-2 mt-5">
+      <input id="f-hide-saturated" type="checkbox" class="h-4 w-4">
+      <span>Hide high-saturation deals</span>
+    </label>
+  </section>
+
+  <div id="errors" class="hidden mb-4 bg-amber-50 border border-amber-200 rounded p-3 text-sm text-amber-900"></div>
+
+  <!-- Desktop table -->
+  <div class="hidden md:block bg-white rounded-lg shadow-sm overflow-x-auto">
+    <table class="min-w-full text-sm">
+      <thead class="bg-slate-100 text-slate-600 text-left">
+        <tr>
+          <th class="px-3 py-2" data-sort="title">Game</th>
+          <th class="px-3 py-2" data-sort="platform">Platform</th>
+          <th class="px-3 py-2" data-sort="retailer">Retailer</th>
+          <th class="px-3 py-2 text-right" data-sort="buy_price">Buy</th>
+          <th class="px-3 py-2 text-right" data-sort="cex_cash">CeX Cash</th>
+          <th class="px-3 py-2 text-right" data-sort="cex_voucher">CeX Voucher</th>
+          <th class="px-3 py-2 text-right" data-sort="profit_voucher">Profit (V)</th>
+          <th class="px-3 py-2 text-right" data-sort="profit_cash">Profit (C)</th>
+          <th class="px-3 py-2" data-sort="saturation_risk">Stock</th>
+          <th class="px-3 py-2">Links</th>
+        </tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </div>
+
+  <!-- Mobile cards -->
+  <div id="cards" class="md:hidden grid gap-3"></div>
+
+  <p class="text-xs text-slate-500 mt-6">
+    Prices may be up to 24h stale. CeX prices change without notice and stock saturation drops them further.
+    Site/TOS rules apply — verify before purchase. Not financial advice.
+  </p>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

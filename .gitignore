@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+.DS_Store
+.idea/
+.vscode/
+.pytest_cache/
+
+# Local scrape cache — restored from actions/cache in CI; should not be committed.
+data/cache.sqlite
+data/cache.sqlite-journal

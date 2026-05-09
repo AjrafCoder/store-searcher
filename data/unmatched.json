@@ -1,0 +1,82 @@
+{
+  "generated_at": "2026-05-09T22:49:31.687351+00:00",
+  "items": [
+    {
+      "retailer": "The Game Collection",
+      "title": "Funko Fusion (PS5)",
+      "platform": "PS5",
+      "price": 9.95,
+      "url": "https://www.thegamecollection.net/products/funko-fusion-ps5-1",
+      "in_stock": true,
+      "delivery_estimate": 0.0,
+      "ean": "811949037725",
+      "reason": "EAN not in CeX gaming catalog"
+    },
+    {
+      "retailer": "The Game Collection",
+      "title": "Wizard with a Gun (PS5)",
+      "platform": "PS5",
+      "price": 9.95,
+      "url": "https://www.thegamecollection.net/products/wizard-with-a-gun-ps5",
+      "in_stock": true,
+      "delivery_estimate": 0.0,
+      "ean": "5056635605801",
+      "reason": "EAN not in CeX gaming catalog"
+    },
+    {
+      "retailer": "The Game Collection",
+      "title": "Big Buck Hunter Ultimate Trophy Deluxe Edition (PS5)",
+      "platform": "PS5",
+      "price": 9.95,
+      "url": "https://www.thegamecollection.net/products/big-buck-hunter-ultimate-trophy-deluxe-edition-ps5",
+      "in_stock": true,
+      "delivery_estimate": 0.0,
+      "ean": "5060968302665",
+      "reason": "EAN not in CeX gaming catalog"
+    },
+    {
+      "retailer": "The Game Collection",
+      "title": "Nerf Legends (PS5)",
+      "platform": "PS5",
+      "price": 9.95,
+      "url": "https://www.thegamecollection.net/products/nerf-legends-ps5",
+      "in_stock": true,
+      "delivery_estimate": 0.0,
+      "ean": "5060968302405",
+      "reason": "EAN not in CeX gaming catalog"
+    },
+    {
+      "retailer": "The Game Collection",
+      "title": "Potion Permit Complete Edition (PS5)",
+      "platform": "PS5",
+      "price": 10.95,
+      "url": "https://www.thegamecollection.net/products/potion-permit-complete-edition-ps5",
+      "in_stock": true,
+      "delivery_estimate": 0.0,
+      "ean": "5060690797104",
+      "reason": "EAN not in CeX gaming catalog"
+    },
+    {
+      "retailer": "The Game Collection",
+      "title": "Saints Row Day One Edition (PS5)",
+      "platform": "PS5",
+      "price": 10.95,
+      "url": "https://www.thegamecollection.net/products/saints-row-day-one-edition-ps5-1",
+      "in_stock": true,
+      "delivery_estimate": 0.0,
+      "ean": "4020628872564",
+      "reason": "EAN not in CeX gaming catalog"
+    },
+    {
+      "retailer": "The Game Collection",
+      "title": "My Fantastic Ranch (PS5)",
+      "platform": "PS5",
+      "price": 10.95,
+      "url": "https://www.thegamecollection.net/products/my-fantastic-ranch-ps5-1",
+      "in_stock": true,
+      "delivery_estimate": 0.0,
+      "ean": "3665962017991",
+      "reason": "EAN not in CeX gaming catalog"
+    }
+  ]
+}

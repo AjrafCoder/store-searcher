@@ -1,0 +1,31 @@
+{
+  "generated_at": "2026-05-09T22:49:31.687351+00:00",
+  "min_profit_voucher": 1.0,
+  "deal_count": 1,
+  "total_potential_profit": 1.05,
+  "retailer_rows": 30,
+  "unique_eans": 30,
+  "cex_matched": 23,
+  "errors": [],
+  "deals": [
+    {
+      "title": "Goosebumps: Terror in Little Creek",
+      "retailer_title": "Goosebumps: Terror in Little Creek (PS5)",
+      "platform": "PS5",
+      "retailer": "The Game Collection",
+      "ean": "5060968302801",
+      "buy_price": 9.95,
+      "delivery_estimate": 0.0,
+      "cex_cash": 8.0,
+      "cex_voucher": 11.0,
+      "cex_sell": 18.0,
+      "profit_voucher": 1.05,
+      "profit_cash": -1.95,
+      "saturation_risk": "medium",
+      "cex_stock": 29,
+      "buy_url": "https://www.thegamecollection.net/products/goosebumps-terror-in-little-creek-ps5",
+      "cex_url": "https://uk.webuy.com/product-detail?id=5060968302801",
+      "cex_box_id": "5060968302801"
+    }
+  ]
+}

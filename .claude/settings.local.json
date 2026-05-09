@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx skills *)",
+      "Bash(curl -sS -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/124.0 Safari/537.36\" -H \"Origin: https://uk.webuy.com\" -H \"Referer: https://uk.webuy.com/\" \"https://wss2.cex.uk.webuy.io/v3/boxes?categoryIds=%5B1003%5D&firstRecord=1&count=5\" -w \"\\\\nHTTP %{http_code}\\\\n\")",
+      "Bash(pip install *)",
+      "Bash(python *)"
+    ]
+  },
+  "enabledPlugins": {
+    "everything-claude-code@everything-claude-code": true
+  }
+}
