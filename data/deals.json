@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-05-09T22:49:31.687351+00:00",
+  "generated_at": "2026-05-10T00:05:16.136666+00:00",
   "min_profit_voucher": 1.0,
   "deal_count": 1,
   "total_potential_profit": 1.05,
-  "retailer_rows": 30,
-  "unique_eans": 30,
-  "cex_matched": 23,
+  "retailer_rows": 1841,
+  "unique_eans": 1839,
+  "cex_matched": 64,
   "errors": [],
   "deals": [
     {
