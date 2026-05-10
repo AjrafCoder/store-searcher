@@ -15,13 +15,15 @@ PROFITABLE_PRICE_CEILING = 45.00
 
 # --- Concurrency + politeness ---
 # Per-host minimum interval between requests, enforced across all worker
-# threads. 0.4s = 2.5 RPS per host. Lower = faster + more aggressive.
-HOST_INTERVAL_SECONDS = 0.4
+# threads. 1.5s ≈ 0.66 RPS per host — keeps CeX's Cloudflare WAF happy from
+# residential IPs. Drop to 0.4 if running from GitHub Actions or a fresh IP.
+HOST_INTERVAL_SECONDS = 1.5
 
-# Worker pool sizes. Higher than ~8 doesn't help much because the per-host
-# rate limiter caps effective throughput.
-DETAIL_FETCH_WORKERS = 6
-CEX_LOOKUP_WORKERS = 6
+# Worker pool sizes. With a 1.5s rate limit, more than 2 workers buys nothing
+# but still increases burstiness on slow responses. CeX is single-file to
+# minimise the WAF surface.
+DETAIL_FETCH_WORKERS = 2
+CEX_LOOKUP_WORKERS = 1
 
 # --- Cache TTLs ---
 RETAILER_CACHE_TTL_SECONDS = 7 * 24 * 3600   # 7 days for retailer detail pages
